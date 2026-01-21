@@ -1,96 +1,155 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS369-Lab2-CSS</title>
     <style>
-        /* ข้อ 1: id=organization - พื้นหลัง bisque, text center, ตัวอักษรเขียว */
-        #organization {
+        /* 1. Tag ที่มี id="list-cs" พื้นหลังสี bisque, text center, ตัวอักษรสีเขียว */
+        #list-cs {
             background-color: bisque;
             text-align: center;
             color: green;
         }
 
-        /* ข้อ 2: class year-range - ขอบซ้าย 6px สีแดง solid */
-        .year-range {
+        /* 2. Tag ที่อยู่ใน class topic-heading มีขอบซ้าย 6px สีแดง solid */
+        .topic-heading {
             border-left-width: 6px;
             border-left-color: red;
             border-left-style: solid;
         }
 
-        /* ข้อ 3: ตัวอักษรตัวแรกใน p มีขนาด 35px และสีน้ำเงิน */
+        /* 3. ตัวอักษรตัวแรกใน tag <p> มีขนาด 35px และมีสีน้ำเงิน */
         p::first-letter {
             font-size: 35px;
             color: blue;
         }
 
-        /* ข้อ 4: เมื่อ hover บน p ให้ปรับตัวอักษรเป็น 26px และสีแดง */
+        /* 4. เมื่อ cursor เลื่อนผ่าน tag p ปรับตัวอักษรเป็น 26px และสีแดง */
         p:hover {
             font-size: 26px;
             color: red;
         }
 
-        /* ข้อ 5: class heading ตัวอักษรสี #0D3D56 และ overrule styling อื่น */
+        /* 5. ทุก tag ที่มี class heading ตัวอักษรมีสี #0D3D56 ใช้ !important เพื่อ overrule */
         .heading {
             color: #0D3D56 !important;
         }
 
-        /* ข้อ 6: link ที่ยังไม่เคยถูกเยี่ยม - สีม่วง, เส้นใต้แบบจุด, เส้นใต้สีแดง */
+        /* 6. ทุก link ที่ยังไม่เคยถูกเยี่ยม เป็นสีม่วง ขีดเส้นใต้แบบ dotted สีแดง */
         a:link {
             color: blueviolet;
             text-decoration-style: dotted;
             text-decoration-color: red;
         }
 
-        /* ข้อ 7: link ที่ถูก visited แล้ว - สีเทา, เส้นใต้แบบจุด, เส้นใต้สีน้ำเงิน */
+        /* 7. ทุก link ที่ถูก visited แล้ว เป็นสีเทา ขีดเส้นใต้แบบ dotted สีน้ำเงิน */
         a:visited {
             color: gray;
             text-decoration-style: dotted;
             text-decoration-color: blue;
         }
 
-        /* ข้อ 8: link ภายใต้ li มีพื้นหลังสีฟ้า aquamarine */
+        /* 8. ทุก link ที่อยู่ภายใต้ Tag <li> ให้ปรับพื้นหลังเป็นสีฟ้า aquamarine */
         li a {
             background-color: aquamarine;
         }
 
-        /* ข้อ 9: ทุก p มี indent 40px */
+        /* 9. ทุก tag <p> กำหนด indent ให้มีความยาว 40px */
         p {
             text-indent: 40px;
         }
     </style>
 </head>
 <body>
-    <h1 id="organization" class="heading">เกี่ยวกับ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์</h1>
-    <p>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ก่อตั้งขึ้นเมื่อปี พ.ศ. 2529 เป็นคณะลำดับที่ 9 ของมหาวิทยาลัยธรรมศาสตร์ และเป็นคณะแรกที่ตั้งขึ้น ณ ศูนย์รังสิต ด้วยนโยบายของมหาวิทยาลัยในการส่งเสริมและสนับสนุนการศึกษาทางวิทยาศาสตร์และเทคโนโลยี นับเป็นคณะวิทยาศาสตร์ที่ก่อตั้งเป็นแห่งที่ 18 ของประเทศในขณะนั้น</p>
+    <h1 class="heading topic-heading">Computer science</h1>
+    <p>Computer science is the study of computation, information, and automation. Computer science spans theoretical disciplines (such as algorithms, theory of computation, and information theory) to applied disciplines (including the design and implementation of hardware and software).</p>
 
-    <h2 class="year-range">2529-2538</h2>
-    <h3>ก่อตั้งสร้างฐาน</h3>
-    <p>คณะวิทยาศาสตร์และเทคโนโลยีได้รับการสถาปนาขึ้นเมื่อวันที่ 31 มีนาคม 2529 ในยุคแรกเป็นช่วงของการก่อตั้ง สร้างตัว เปิดสาขาวิชากว่า 10 สาขาวิชา ควบคู่ไปกับการพัฒนาด้านกายภาพ ก่อสร้างอาคารเรียนและห้องปฏิบัติการ จัดหาเครื่องมือวิทยาศาสตร์ระดับสูง เพื่อใช้สอนและวิจัย รวมทั้งการพัฒนาศักยภาพของบุคลากร ในระยะแรกคณะฯ ใช้ตึกโดม (ปัจจุบันเรียกว่าอาคารโดมบริหาร) เป็นที่ทำการของคณะฯ ทั้งด้านการจัดการเรียนการสอน การบริหารงาน ห้องพักอาจารย์ โดยเริ่มเปิดการเรียนการสอนใน 5 สาขาวิชา คือ สาขาวิชาคณิตศาสตร์ สาขาวิชาสถิติ สาขาวิชาศาสตร์คอมพิวเตอร์ สาขาวิชาวิทยาศาสตร์สิ่งแวดล้อม และสาขาวิชาวิทยาศาสตร์สุขภาพ</p>
+    <h2 class="topic-heading">History</h2>
+    <p>The history of computer science began long before the modern discipline of computer science that emerged in the 20th century, and hinted at in the centuries prior. The progression, from mechanical inventions and mathematical theories towards the modern concepts and machines, formed a major academic field and the basis of a massive worldwide industry.</p>
 
-    <h2 class="year-range">2539-2548</h2>
-    <h3>ขยายสู่ระดับบัณฑิตศึกษา</h3>
-    <p>คณะฯ ดำเนินการจัดการศึกษาพัฒนากำลังคนด้านวิทยาศาสตร์และเทคโนโลยีเพื่อสนองความก้าวหน้าด้านอุตสาหกรรมของประเทศอย่างต่อเนื่อง ในยุคที่สองนี้มีการเปิดหลักสูตรเพิ่มทั้งในระดับปริญญาตรี และระดับบัณฑิตศึกษาอีก 7 หลักสูตร ภายใต้ 10 ภาควิชา ได้แก่ คณิตศาสตร์และสถิติ วิทยาการคอมพิวเตอร์ วิทยาศาสตร์สิ่งแวดล้อม ฟิสิกส์ เคมี เทคโนโลยีชีวภาพ วิทยาศาสตร์และเทคโนโลยีการอาหาร เทคโนโลยีการเกษตร เทคโนโลยีชนบท และวิทยาศาสตร์สุขภาพ</p>
+    <h2 class="topic-heading">Philosophy</h2>
+    <p>A number of computer scientists have argued for the distinction of three separate paradigms in computer science.</p>
 
-    <h2 class="year-range">2549-2558</h2>
-    <h3>พัฒนาเป็นมหาวิทยาลัยวิจัย</h3>
-    <p>ในยุคที่สามนี้เป็นช่วงที่คณะฯ มุ่งเน้นการพัฒนาสู่ความเป็นเลิศทางด้านการวิจัย พัฒนาศักยภาพบุคลากรให้มีความสามารถในการทำวิจัยระดับสูง สร้างผลงานวิจัยที่มีคุณภาพและเป็นที่ยอมรับในระดับชาติและนานาชาติ รวมทั้งการพัฒนาหลักสูตรให้ทันสมัยและตอบสนองต่อความต้องการของตลาดแรงงาน</p>
+    <h3>Epistemology of computer science</h3>
+    <p>Despite the word "science" in its name, there is debate over whether or not computer science is a discipline of science, mathematics, or engineering. Allen Newell and Herbert A. Simon argued in 1975 that computer science is an empirical science.</p>
 
-    <h2 class="year-range">2559-ปัจจุบัน</h2>
-    <h3>ผลิตผู้นำรุ่นใหม่ให้สังคมไทย</h3>
-    <p>ในยุคปัจจุบัน คณะฯ มุ่งเน้นการผลิตบัณฑิตที่มีความรู้ความสามารถ มีทักษะในศตวรรษที่ 21 พร้อมเป็นผู้นำการเปลี่ยนแปลงในสังคม โดยเน้นการเรียนรู้แบบบูรณาการ การวิจัยเพื่อสร้างนวัตกรรม และการบริการวิชาการแก่สังคม เพื่อตอบสนองต่อการพัฒนาประเทศอย่างยั่งยืน</p>
+    <h3>Paradigms of computer science</h3>
+    <p>Peter Wegner argued that those paradigms are science, technology, and mathematics. Peter Denning's working group argued that they are theory, abstraction (modeling), and design.</p>
 
-    <h2>เว็บไซต์ที่เกี่ยวข้อง</h2>
+    <h2 class="topic-heading">Fields</h2>
+    <p>Computer science is considered by some to have a much closer relationship with mathematics than many scientific disciplines, with some observers saying that computing is a mathematical science.</p>
+
+    <h3>Theoretical computer science</h3>
+    <p>Theoretical Computer Science is mathematical and abstract in spirit, but it derives its motivation from practical and everyday computation.</p>
+
+    <h4>Theory of computation</h4>
+    <p>According to Peter Denning, the fundamental question underlying computer science is, "What can be automated?" Theory of computation is focused on answering fundamental questions about what can be computed and what amount of resources are required to perform those computations.</p>
+
+    <h4>Information and coding theory</h4>
+    <p>Information theory, closely related to probability and statistics, is related to the quantification of information. Coding theory is the study of the properties of codes (systems for converting information from one form to another) and their fitness for a specific application.</p>
+
+    <h4>Data structures and algorithms</h4>
+    <p>Data structures and algorithms are the studies of commonly used computational methods and their computational efficiency.</p>
+
+    <h4>Programming language theory and formal methods</h4>
+    <p>Programming language theory is a branch of computer science that deals with the design, implementation, analysis, characterization, and classification of programming languages and their individual features.</p>
+
+    <h3>Applied computer science</h3>
+    <p>Applied Computer Science aims at identifying certain computer science concepts that can be used directly in solving real world problems.</p>
+
+    <h4>Computer graphics and visualization</h4>
+    <p>Computer graphics is the study of digital visual contents and involves the synthesis and manipulation of image data.</p>
+
+    <h4>Image and sound processing</h4>
+    <p>The image and sound processing disciplines deal with processing of images and sounds as forms of data.</p>
+
+    <h4>Computational science, finance and engineering</h4>
+    <p>Computational science is the application of computer science to solve scientific problems.</p>
+
+    <h4>Human–computer interaction</h4>
+    <p>Human–computer interaction (HCI) is the study of how humans interact with computers and how to design computer systems that are easy, quick, and productive for humans to use.</p>
+
+    <h4>Software engineering</h4>
+    <p>Software engineering is the study of designing, implementing, and modifying software in order to ensure it is of high quality, affordable, maintainable, and fast to build.</p>
+
+    <h4>Artificial intelligence</h4>
+    <p>Artificial intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems.</p>
+
+    <h3>Computer systems</h3>
+    <p>Computer systems research focuses on making computing systems work more efficiently or working at all.</p>
+
+    <h4>Computer architecture and microarchitecture</h4>
+    <p>Computer architecture is the study of the fundamental working principles of computers. Microarchitecture describes how a particular processor will implement the ISA.</p>
+
+    <h4>Concurrent, parallel and distributed computing</h4>
+    <p>Concurrency refers to the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome.</p>
+
+    <h4>Computer networks</h4>
+    <p>A computer network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes.</p>
+
+    <h4>Computer security and cryptography</h4>
+    <p>Computer security is a branch of computer technology with the objective of protecting information from unauthorized access, disruption, or modification while maintaining the accessibility and usability of the system for its intended users.</p>
+
+    <h4>Databases and data mining</h4>
+    <p>A database is intended to organize, store, and retrieve large amounts of data easily. Data mining is the process of discovering patterns in large data sets.</p>
+
+    <h2 class="topic-heading">เว็บไซต์ที่เกี่ยวข้อง</h2>
     <ul>
-        <li><a href="https://cs.sci.tu.ac.th/about-faculty-th-2/">ที่มา https://cs.sci.tu.ac.th/about-faculty-th-2/</a></li>
-        <li><a href="https://cs.sci.tu.ac.th/">คลิกเพื่อไปสู่เว็บไซต์สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์</a></li>
-        <li><a href="https://sci.tu.ac.th/">คลิกเพื่อไปสู่เว็บไซต์คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์</a></li>
-        <li><a href="https://tu.ac.th/">คลิกเพื่อไปสู่เว็บไซต์มหาวิทยาลัยธรรมศาสตร์</a></li>
+        <li>
+            <h5 id="list-cs"><a href="https://en.wikipedia.org/wiki/List_of_computer_scientists">List of computer scientists</a></h5>
+        </li>
+        <li>
+            <h5><a href="https://en.wikipedia.org/wiki/List_of_computer_science_awards">List of computer science awards</a></h5>
+        </li>
+        <li>
+            <h5><a href="https://en.wikipedia.org/wiki/List_of_pioneers_in_computer_science">List of pioneers in computer science</a></h5>
+        </li>
     </ul>
 
     <hr>
-    <!-- ข้อ 10: inline style สำหรับ center alignment -->
-    <a href="about.html" style="text-align: center; display: block;">สมาชิกภายในกลุ่ม</a>
+    <!-- 10. ใช้ Styling แบบ inline กับลิงก์สมาชิกภายในกลุ่ม เพื่อจัด text แบบ center alignment -->
+    <a href="about.html" style="display: block; text-align: center;">สมาชิกภายในกลุ่ม</a>
+
 </body>
 </html>

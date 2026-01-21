@@ -1,0 +1,98 @@
+/* ======================================== */
+/* CSS จาก Part 3                           */
+/* ======================================== */
+
+/* 1. Tag ที่มี id="list-cs" พื้นหลังสี bisque, text center, ตัวอักษรสีเขียว */
+#list-cs {
+    background-color: bisque;
+    text-align: center;
+    color: green;
+}
+
+/* 2. Tag ที่อยู่ใน class topic-heading มีขอบซ้าย 6px สีแดง solid */
+.topic-heading {
+    border-left-width: 6px;
+    border-left-color: red;
+    border-left-style: solid;
+}
+
+/* 3. ตัวอักษรตัวแรกใน tag <p> มีขนาด 35px และมีสีน้ำเงิน */
+p::first-letter {
+    font-size: 35px;
+    color: blue;
+}
+
+/* 4. เมื่อ cursor เลื่อนผ่าน tag p ปรับตัวอักษรเป็น 26px และสีแดง */
+p:hover {
+    font-size: 26px;
+    color: red;
+}
+
+/* 5. ทุก tag ที่มี class heading ตัวอักษรมีสี #0D3D56 ใช้ !important เพื่อ overrule */
+.heading {
+    color: #0D3D56 !important;
+}
+
+/* 6. ทุก link ที่ยังไม่เคยถูกเยี่ยม เป็นสีม่วง ขีดเส้นใต้แบบ dotted สีแดง */
+a:link {
+    color: blueviolet;
+    text-decoration-style: dotted;
+    text-decoration-color: red;
+}
+
+/* 7. ทุก link ที่ถูก visited แล้ว เป็นสีเทา ขีดเส้นใต้แบบ dotted สีน้ำเงิน */
+a:visited {
+    color: gray;
+    text-decoration-style: dotted;
+    text-decoration-color: blue;
+}
+
+/* 8. ทุก link ที่อยู่ภายใต้ Tag <li> ให้ปรับพื้นหลังเป็นสีฟ้า aquamarine */
+li a {
+    background-color: aquamarine;
+}
+
+/* 9. ทุก tag <p> กำหนด indent ให้มีความยาว 40px */
+p {
+    text-indent: 40px;
+}
+
+/* ======================================== */
+/* ส่วนที่ 4: การปรับปรุง CSS (Optional)      */
+/* ======================================== */
+
+/*
+ข้อด้อยที่ 1: เนื้อหาติดขอบหน้าจอ ไม่มี padding/margin ที่เหมาะสม
+- ทำให้อ่านยาก และไม่สวยงาม
+- ขาด visual spacing ระหว่าง elements
+
+การปรับปรุง:
+- เพิ่ม padding ให้ body เพื่อให้มีระยะห่างจากขอบ
+- กำหนด max-width เพื่อจำกัดความกว้างของเนื้อหา
+- เพิ่ม line-height เพื่อให้อ่านง่ายขึ้น
+*/
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    line-height: 1.6;
+}
+
+/*
+ข้อด้อยที่ 2: Font เริ่มต้นของ browser ดูไม่สวยงาม และขาดความเป็นมืออาชีพ
+- ใช้ font serif ของ browser ซึ่งดูล้าสมัย
+- ขนาดตัวอักษรอาจเล็กเกินไปในบางหน้าจอ
+
+การปรับปรุง:
+- กำหนด font-family ที่อ่านง่าย ใช้ sans-serif
+- ปรับขนาด font-size ให้เหมาะสม
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+/* เพิ่ม padding ให้ topic-heading เพื่อให้มีระยะห่างจากขอบซ้าย */
+.topic-heading {
+    padding-left: 10px;
+}
